@@ -15,10 +15,10 @@ jobs:
 
       - name: Generate plugin artifact
         run: |
-          mkdir -p release/daan-modify-license-check
-          rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" "$GITHUB_WORKSPACE/" release/daan-modify-license-check/ --delete --delete-excluded
+          mkdir -p release/daan-posts-by-tag
+          rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" "$GITHUB_WORKSPACE/" release/daan-posts-by-tag/ --delete --delete-excluded
           cd "${GITHUB_WORKSPACE}/release" || exit
-          zip -r "${GITHUB_WORKSPACE}/daan-modify-license-check.zip" .
+          zip -r "${GITHUB_WORKSPACE}/daan-posts-by-tag.zip" .
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
@@ -26,6 +26,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{github.workspace}}/daan-modify-license-check.zip
-          asset_name: daan-modify-license-check.zip
+          asset_path: ${{github.workspace}}/daan-posts-by-tag.zip
+          asset_name: daan-posts-by-tag.zip
           asset_content_type: application/zip
