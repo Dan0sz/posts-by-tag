@@ -12,4 +12,4 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$posts_by_tag = new \Daan\PostsByTag\Plugin();
+$posts_by_tag = new \Daan\PostsByTag\Shortcode();
