@@ -48,10 +48,10 @@ class Shortcode {
 
 		// Prepare query arguments
 		$args = [
-			'posts_per_page' => intval( $atts[ 'count' ] ),
-			'tag'            => sanitize_text_field( $atts[ 'tag' ] ),
+			'posts_per_page' => intval( $atts[ 'number' ] ),
+			'tag'            => sanitize_text_field( $atts[ 'tags' ] ),
 			'post_status'    => 'publish',
-			'orderby'        => sanitize_text_field( $atts[ 'orderby' ] ),
+			'orderby'        => sanitize_text_field( $atts[ 'order_by' ] ),
 			'order'          => strtoupper( $atts[ 'order' ] ) === 'ASC' ? 'ASC' : 'DESC',
 		];
 
