@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Daan - Posts By Tag
  * Description: Use the posts-by-tag shortcode to display a list of posts with a defined tag.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Daan from Daan.dev
  * Author URI: https://daan.dev
  * GitHub Plugin URI: Dan0sz/posts-by-tag
